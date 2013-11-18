@@ -1,7 +1,5 @@
 # OpenProject Timestamp Migrator Plugin
 
-FIXME Add description and check issue tracker link below
-
-## Issue Tracker
-
-https://www.openproject.org/projects/timestamp-migrator/issues
+Including this plugin performs a migration changing the timestamps
+in the database from the local time zone, which was the Rails2 default,
+to UTC, which is the Rails3 default.
