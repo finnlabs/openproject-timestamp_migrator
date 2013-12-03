@@ -16,6 +16,11 @@ class MigrateTimestampsToUtc < ActiveRecord::Migration
   include Migration::Utils
 
   def up
+    if Rails.env.test? || Rails.env.development?
+      say_with_time_silently "Running in test environment, so there are no timestamps to migrate" do
+        return
+      end
+    end
     raise "Error: Adapting Timestamps is only supported for " +
       "postgres and mysql yet." unless postgres? || mysql?
     readOldTimezone
