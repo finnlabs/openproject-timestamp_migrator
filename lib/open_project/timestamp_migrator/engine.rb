@@ -6,7 +6,7 @@ module OpenProject::TimestampMigrator
 
     register 'openproject-timestamp_migrator',
              :author_url => 'http://finn.de',
-             :requires_openproject => '>= 3.0.0pre13'
+             :requires_openproject => '>= 4.0.0'
 
   end
 end
